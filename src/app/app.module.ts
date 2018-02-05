@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 //rutas
 import { app_routing } from "./app.routes";
-
+  
 import { AppComponent } from './app.component';
 import { liguesComponent } from './components/ligues.component';
 import { geoComponent } from './components/geo.component';
 import { IndexComponent } from './components/index.component';
+import {LiguesServices} from './services/ligues.services'
+import { ligueModel } from './models/ligueModel'
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { IndexComponent } from './components/index.component';
     HttpModule,
     app_routing
   ],
-  providers: [],
+  providers: [LiguesServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

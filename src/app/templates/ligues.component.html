@@ -1,2 +1,18 @@
 <h2>Ligues de Football</h2>
 <p>Liste de ligues</p>
+  <div class="row">
+    <div class="col s12 m6" ngFor="let item of liguesList ">
+      <div class="card">
+        <div class="card-image">
+          <img src="../images/football-header.jpg">
+          <span class="card-title">{{item.caption}}</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p>{{item.league}}, {{item.year}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>{{liguesList}}</p>
